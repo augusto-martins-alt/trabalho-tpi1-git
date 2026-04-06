@@ -4,6 +4,7 @@
      * Executa uma operação matemática básica.
      * @param operacao Tipo da operação: "soma"
      * @param operacao Tipo da operação: "subtracao", "multiplicacao"
+     * @param operacao Tipo da operação: "divisao"
      * @param a Primeiro número
      * @param b Segundo número
      * @return Resultado da operação
@@ -17,6 +18,11 @@
                 return a - b;
             case "multiplicacao":
                 return a * b;
+            case "divisao":
+                if (b == 0) {
+                    throw new IllegalArgumentException("Divisão por zero não é permitida!");
+                }
+                return (double) a / b;
         }
     }
 
@@ -28,6 +34,7 @@
         System.out.println("Soma: " + calc.calcular("soma", 10, 5));
         System.out.println("Subtração: " + calc.calcular("subtracao", 10, 5));
         System.out.println("Multiplicação: " + calc.calcular("multiplicacao", 10, 5));
+        System.out.println("Divisão: " + calc.calcular("divisao", 10, 5));
     }
 }
 
