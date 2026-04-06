@@ -2,9 +2,7 @@
 
     /**
      * Executa uma operação matemática básica.
-     * @param operacao Tipo da operação: "soma"
-     * @param operacao Tipo da operação: "subtracao", "multiplicacao"
-     * @param operacao Tipo da operação: "divisao"
+     * @param operacao Tipo da operação:  "soma", "subtracao", "multiplicacao", "divisao"
      * @param a Primeiro número
      * @param b Segundo número
      * @return Resultado da operação
@@ -13,7 +11,6 @@
         switch (operacao.toLowerCase()) {
             case "soma":
                 return a + b;
-            
             case "subtracao":
                 return a - b;
             case "multiplicacao":
